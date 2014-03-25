@@ -8,12 +8,22 @@ dns.comodo = new Array("8.26.56.26", "8.20.247.20", "Comodo Secure DNS Server");
 var main_dns = "google";
 
 $(document).ready(function(){
-  for(var key in dns){
-    if(key != main_dns){
-      $("dns").append("<p><b>" + dns[key][0] + "</b>, <b>" + dns[key][1] + "</b> - " + dns[key][2] + "</p>");
+  if($("dns")){
+    for(var key in dns){
+      if(key != main_dns){
+        $("dns").append("<p><b>" + dns[key][0] + "</b>, <b>" + dns[key][1] + "</b> - " + dns[key][2] + "</p>");
+      }
     }
+    
+    $("#mdns").html("<b>" + dns[main_dns][0] + "</b>, <b>" + dns[main_dns][1] + "</b>");
+    $("#name").html("<b>" + dns[main_dns][2]);
   }
   
-  $("#mdns").html("<b>" + dns[main_dns][0] + "</b>, <b>" + dns[main_dns][1] + "</b>");
-  $("#name").html("<b>" + dns[main_dns][2]);
+ 
+  
+  if($("#main_dns")){
+    for(var key in dns[main_dns]){
+      $("#main_dns").append(key);
+    }
+  }
 });
