@@ -18,12 +18,4 @@ $(document).ready(function(){
     $("#mdns").html("<b>" + dns[main_dns][0] + "</b>, <b>" + dns[main_dns][1] + "</b>");
     $("#name").html("<b>" + dns[main_dns][2]);
   }
-  
- 
-  
-  if($("#main_dns")){
-    $("#main_dns").append(dns[main_dns][0]);
-    $("#main_dns").append("<br />");
-    $("#main_dns").append(dns[main_dns][1]);
-  }
 });
