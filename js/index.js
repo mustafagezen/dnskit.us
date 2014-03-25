@@ -23,6 +23,7 @@ $(document).ready(function(){
   
   if($("#main_dns")){
     $("#main_dns").append(dns[main_dns][0]);
+    $("#main_dns").append("<br />");
     $("#main_dns").append(dns[main_dns][1]);
   }
 });
