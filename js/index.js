@@ -23,7 +23,7 @@ $(document).ready(function(){
   
   if($("#main_dns")){
     for(var key in dns[main_dns]){
-      $("#main_dns").append(key);
+      $("#main_dns").append(dns[main_dns][key]);
     }
   }
 });
